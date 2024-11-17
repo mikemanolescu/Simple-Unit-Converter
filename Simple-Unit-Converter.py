@@ -27,19 +27,26 @@ while True:
         print ("Invalid input. Please enter 'yes' or 'no'.")
 
 #Function convert_temperature-
-#Def convert_temperature():
-    #Print temperature conversion choices:
-        #1 for Celsius to Fahrenheit
-        #2 for Fahrenheit to Celsius
-    #Input temperature conversion choice
-    #While input is invalid:
-        #Print error message “This input is not recognized, please enter 1 for Temperature or 2 for Distance”
+def convert_temperature():
+    print("What would you like to convert? 1 for Celsius to Fahrenheit or 2 for Fahrenheit to Celsius")
+    #Get input
+    tempunit = int(input("Enter 1 or 2"))
+    #Validate input
+    while tempunit not in [1, 2]:
+        print(“This input is not recognized, please enter 1 for Celsius to Fahrenheit or 2 for Fahrenheit to Celsius”)
         #Ask user for valid input
+        tempunit = int(input("Enter 1 or 2"))
+    #Ask for Value to Convert
+    if tempunit == 1:
+        print("Please input degrees Celsius)
+        celsius = int(input("Enter a value"))
+        
+    elif tempunit == 2:
+        print("Please input degrees Fahrenheit")
+        fahrenheit = int(input("Enter a value"))
 
-    #Input value to convert
-    #If input contains units, like 20C:
-        #Print error message “This input is not recognized, please enter a number only without units”
-        #Ask user for valid input
+
+
 
     #If choice is 1:
         #Convert using formula: (value x 9/5) + 32
