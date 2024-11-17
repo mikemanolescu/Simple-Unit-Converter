@@ -9,16 +9,22 @@ def main():
         #Ask user for valid input
         conversion = int(input("Enter 1 or 2"))
        
-    #If conversion is 1:
-        #Function convert_temperature()
-    #Else if conversion is 2:
-        #Function convert_distance()
+    if conversion == 1:
+        convert_temperature()
+    elif conversion == 2:
+        convert_distance()
 
-    #Print “Do you wish to perform another conversion?”
-    #If yes:
-        #Restart main()
-    #Else:
-        #Exit program
+#Restart or Exit Loop
+while True:
+    print(“Do you wish to perform another conversion? (yes/no)”)
+    again = input().lower()
+    if again == "yes":
+        main()
+    elif again == "no":
+        print("Bye!")
+        break
+    else:
+        print ("Invalid input. Please enter 'yes' or 'no'.")
 
 #Function convert_temperature-
 #Def convert_temperature():
