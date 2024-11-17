@@ -1,10 +1,13 @@
 #Main Program
-#Def main():
-    #Print conversion menu “What are you converting? 1. Temperature or 2. Distance? Please choose a number corresponding to the conversion type”
+def main():
+    print(“What are you converting? 1. Temperature or 2. Distance? Please choose a number corresponding to the conversion type.”)
     #Input conversion type from the user (1 for Temperature, 2 for Distance)
-    #While input is invalid:
-        #Print error message “This input is not recognized, please enter 1 for Temperature or 2 for Distance”
+    conversion = int(input("Enter 1 or 2"))
+    #Validate input:
+    while conversion not in [1, 2]:
+        print(“This input is not recognized, please enter 1 for Temperature or 2 for Distance”)
         #Ask user for valid input
+        conversion = int(input("Enter 1 or 2"))
        
     #If conversion is 1:
         #Function convert_temperature()
@@ -16,6 +19,7 @@
         #Restart main()
     #Else:
         #Exit program
+
 #Function convert_temperature-
 #Def convert_temperature():
     #Print temperature conversion choices:
