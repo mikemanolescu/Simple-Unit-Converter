@@ -26,6 +26,16 @@ while True:
     else:
         print ("Invalid input. Please enter 'yes' or 'no'.")
 
+
+#Conversion Formulas
+def to_celsius(fahrenheit):
+  celsius = (fahrenheit - 32) * 5/9 
+  return celsius
+  
+def to_fahrenheit(celsius): 
+  fahrenheit = celsius * 9/5 + 32 
+  return fahrenheit
+  
 #Function convert_temperature-
 def convert_temperature():
     print("What would you like to convert? 1 for Celsius to Fahrenheit or 2 for Fahrenheit to Celsius")
@@ -40,7 +50,7 @@ def convert_temperature():
     if tempunit == 1:
         print("Please input degrees Celsius)
         celsius = int(input("Enter a value"))
-        
+
     elif tempunit == 2:
         print("Please input degrees Fahrenheit")
         fahrenheit = int(input("Enter a value"))
