@@ -41,15 +41,19 @@ def convert_temperature():
     #If choice is 1:
         #Convert using formula: (value x 9/5) + 32
         #Set result as converted value with Fahrenheit unit
-    if tempunit == 1:
-        value = float(input("Please input degrees Celsius"))
-        fahrenheit = (value * 9/5) + 32 
-        return f"{value}"°C is equal to {fahrenheit}°F" 
-
-    elif tempunit == 2:
-        value = float(input("Please input degrees Fahrenheit"))
-        celsius = (value - 32) * 5/9 
-        return f"{value}°F is equal to {celsius:.2f}°C"    #Print result: original value with unit = converted value with unit
+    #Validate value input
+    while True:
+        try:
+            if tempunit == 1:
+                value = float(input("Please input degrees Celsius"))
+                fahrenheit = (value * 9/5) + 32 
+                return f"{value}"°C is equal to {fahrenheit}°F" 
+            elif tempunit == 2:
+                value = float(input("Please input degrees Fahrenheit"))
+                celsius = (value - 32) * 5/9 
+                return f"{value}°F is equal to {celsius:.2f}°C"    #Print result: original value with unit = converted value with unit
+        except ValueError:
+            print("Invalid input. Please enter a numeric value.")
 
      #Else if choice is 2:
         #Convert using formula: (value - 32) x 9/5
@@ -65,16 +69,18 @@ def convert_distance():
     while distunit not in [1,2]:
         print("This input is not recognized, please enter 1 for Miles to Kilometers or 2 for Kilometers to Miles")
         distunit = int(input("Enter 1 or 2"))
-
-    if distunit == 1:
-        value = float(input("Please input Miles"))
-        kilometers = value * 1.60934
-        return f"{value} Miles is equal to {kilometers:.2f} Kilometers"
-
-    elif distunit == 2:
-        value = float(input("Please input Kilometers"))
-        miles = value / 1.60934
-        return f"{value} Kilometers is equal to {miles:.2f} Miles"
+    while True:
+        try:
+            if distunit == 1:
+                value = float(input("Please input Miles"))
+                kilometers = value * 1.60934
+                return f"{value} Miles is equal to {kilometers:.2f} Kilometers"
+            elif distunit == 2:
+                value = float(input("Please input Kilometers"))
+                miles = value / 1.60934
+                return f"{value} Kilometers is equal to {miles:.2f} Miles"
+        except ValueError:
+            print("Invalid input. Please enter a numeric value.")
 
 
 #Def convert_distance():
