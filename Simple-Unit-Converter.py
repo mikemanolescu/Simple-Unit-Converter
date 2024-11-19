@@ -1,22 +1,22 @@
 #Main Program
 def main():
-    print(“What are you converting? 1. Temperature or 2. Distance? Please choose a number corresponding to the conversion type.”)
+    print("What are you converting? 1. Temperature or 2. Distance? Please choose a number corresponding to the conversion type.")
     #Input conversion type from the user (1 for Temperature, 2 for Distance)
     conversion = int(input("Enter 1 or 2"))
     #Validate input:
     while conversion not in [1, 2]:
-        print(“This input is not recognized, please enter 1 for Temperature or 2 for Distance”)
+        print("This input is not recognized, please enter 1 for Temperature or 2 for Distance")
         #Ask user for valid input
         conversion = int(input("Enter 1 or 2"))
        
     if conversion == 1:
-        convert_temperature()
+        print(convert_temperature())
     elif conversion == 2:
-        convert_distance()
+        print(convert_distance())
 
 #Restart or Exit Loop
 while True:
-    print(“Do you wish to perform another conversion? (yes/no)”)
+    print("Do you wish to perform another conversion? (yes/no)")
     again = input().lower()
     if again == "yes":
         main()
