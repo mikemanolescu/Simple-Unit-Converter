@@ -47,11 +47,11 @@ def convert_temperature():
             if tempunit == 1:
                 value = float(input("Please input degrees Celsius"))
                 fahrenheit = (value * 9/5) + 32 
-                return f"{value}" C is equal to {fahrenheit} F" 
+                return f"{value}°C is equal to {fahrenheit}°F" 
             elif tempunit == 2:
                 value = float(input("Please input degrees Fahrenheit"))
                 celsius = (value - 32) * 5/9 
-                return f"{value} F is equal to {celsius:.2f} C"    #Print result: original value with unit = converted value with unit
+                return f"{value}°F is equal to {celsius:.2f}°C"    #Print result: original value with unit = converted value with unit
         except ValueError:
             print("Invalid input. Please enter a numeric value.")
 
