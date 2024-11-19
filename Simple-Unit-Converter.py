@@ -13,7 +13,7 @@ def convert_temperature():
     #If choice is 1:
         #Convert using formula: (value x 9/5) + 32
         #Set result as converted value with Fahrenheit unit
-    #Validate value input
+    #Validate value input if the user inputs an incorrect value
     while True:
         try:
             if tempunit == 1:
@@ -37,10 +37,23 @@ def convert_temperature():
 def convert_distance():
     print("What would you like to convert? 1 for Miles to Kilometers or 2 for Kilometers to Miles")
     distunit = int(input("Enter 1 or 2"))
-
+#validate the input of the correct value from the user
     while distunit not in [1,2]:
         print("This input is not recognized, please enter 1 for Miles to Kilometers or 2 for Kilometers to Miles")
         distunit = int(input("Enter 1 or 2"))
+ #Input value to convert
+    #If input contains units, like 20 miles:
+        #Print error message: “This input is not recognized, please enter a number only without units”
+        #Ask user for valid input
+
+    #If choice is 1:
+        #Convert using formula: value x 1.60934
+        #Set result as converted value with kilometers as unit
+    #Else if choice is 2:
+        #Convert using formula: value / 1.60934
+        #Set result as converted value with miles as unit
+
+    #Print result: original value with unit = converted value with unit
     while True:
         try:
             if distunit == 1:
@@ -54,29 +67,6 @@ def convert_distance():
         except ValueError:
             print("Invalid input. Please enter a numeric value.")
 
-
-#Def convert_distance():
-    #Print distance conversion choices:
-        #1 for Miles to Kilometers
-        #2 for Kilometers to Miles
-    #Input distance conversion choice
-    #While input is invalid:
-        #Print error message “This input is not recognized, please enter 1 for Miles to Kilometers or 2 for Kilometers to Miles”
-        #Ask user for valid input
-
-    #Input value to convert
-    #If input contains units, like 20 miles:
-        #Print error message: “This input is not recognized, please enter a number only without units”
-        #Ask user for valid input
-
-    #If choice is 1:
-        #Convert using formula: value x 1.60934
-        #Set result as converted value with kilometers as unit
-    #Else if choice is 2:
-        #Convert using formula: value / 1.60934
-        #Set result as converted value with miles as unit
-
-    #Print result: original value with unit = converted value with unit
 
 #Main Program
 def main():
@@ -95,7 +85,7 @@ def main():
         elif conversion == 2:
             print(convert_distance())
 
-#Restart or Exit Loop
+#Restart or Exit Loop to use the program again or stop it
         print("Do you wish to perform another conversion? (yes/no)")
         again = input().lower()
         if again == "no":
