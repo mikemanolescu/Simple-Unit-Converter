@@ -15,15 +15,12 @@ def main():
         print(convert_distance())
 
 #Restart or Exit Loop
-while True:
     print("Do you wish to perform another conversion? (yes/no)")
     again = input().lower()
-    if again == "yes":
-        main()
-    elif again == "no":
+    if again == "no":
         print("Bye!")
         break
-    else:
+    elif again != "yes":
         print ("Invalid input. Please enter 'yes' or 'no'.")
 
 #Function convert_temperature-
