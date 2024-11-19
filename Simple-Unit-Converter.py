@@ -63,18 +63,18 @@ def convert_distance():
     distunit = float(input("Enter 1 or 2"))
 
     while distunit not in [1,2]:
-        print("This input is not recognized, please enter 1 for Miles to Kilometers or 2 for Kilometers to Miles
-        distunit = float(input("Enter 1 or 2"))
+        print("This input is not recognized, please enter 1 for Miles to Kilometers or 2 for Kilometers to Miles")
+        distunit = int(input("Enter 1 or 2"))
 
     if distunit == 1:
         value = float(input("Please input Miles"))
         kilometers = value * 1.60934
-        return f"{value}Miles is equal to {kilometers:.2f}Kilometers"
+        return f"{value} Miles is equal to {kilometers:.2f} Kilometers"
 
     elif distunit == 2:
         value = float(input("Please input Kilometers"))
         miles = value / 1.60934
-        return f"{value}Kilometers is equal to {miles:.2f}Miles"
+        return f"{value} Kilometers is equal to {miles:.2f} Miles"
 
 
 #Def convert_distance():
