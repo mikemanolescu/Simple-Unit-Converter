@@ -38,7 +38,7 @@ def convert_temperature():
         tempunit = int(input("Enter 1 or 2"))
     #Ask for Value to Convert
 
-     #If choice is 1:
+    #If choice is 1:
         #Convert using formula: (value x 9/5) + 32
         #Set result as converted value with Fahrenheit unit
     if tempunit == 1:
@@ -60,7 +60,7 @@ def convert_temperature():
 #Function convert_distance-
 def convert_distance():
     print("What would you like to convert? 1 for Miles to Kilometers or 2 for Kilometers to Miles")
-    distunit = float(input("Enter 1 or 2"))
+    distunit = int(input("Enter 1 or 2"))
 
     while distunit not in [1,2]:
         print("This input is not recognized, please enter 1 for Miles to Kilometers or 2 for Kilometers to Miles")
