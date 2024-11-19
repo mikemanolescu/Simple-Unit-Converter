@@ -1,31 +1,3 @@
-#Main Program
-def main():
-    while True:
-        print("What are you converting? 1. Temperature or 2. Distance? Please choose a number corresponding to the conversion type.")
-    #Input conversion type from the user (1 for Temperature, 2 for Distance)
-        conversion = int(input("Enter 1 or 2"))
-    #Validate input:
-        while conversion not in [1, 2]:
-            print("This input is not recognized, please enter 1 for Temperature or 2 for Distance")
-        #Ask user for valid input
-            conversion = int(input("Enter 1 or 2"))
-       
-        if conversion == 1:
-            print(convert_temperature())
-        elif conversion == 2:
-            print(convert_distance())
-
-#Restart or Exit Loop
-        print("Do you wish to perform another conversion? (yes/no)")
-        again = input().lower()
-        if again == "no":
-            print("Bye!")
-            break
-        elif again != "yes":
-            print ("Invalid input. Please enter 'yes' or 'no'.")
-
-main()
-
 #Function convert_temperature-
 def convert_temperature():
     print("What would you like to convert? 1 for Celsius to Fahrenheit or 2 for Fahrenheit to Celsius")
@@ -105,3 +77,31 @@ def convert_distance():
         #Set result as converted value with miles as unit
 
     #Print result: original value with unit = converted value with unit
+
+#Main Program
+def main():
+    while True:
+        print("What are you converting? 1. Temperature or 2. Distance? Please choose a number corresponding to the conversion type.")
+    #Input conversion type from the user (1 for Temperature, 2 for Distance)
+        conversion = int(input("Enter 1 or 2"))
+    #Validate input:
+        while conversion not in [1, 2]:
+            print("This input is not recognized, please enter 1 for Temperature or 2 for Distance")
+        #Ask user for valid input
+            conversion = int(input("Enter 1 or 2"))
+       
+        if conversion == 1:
+            print(convert_temperature())
+        elif conversion == 2:
+            print(convert_distance())
+
+#Restart or Exit Loop
+        print("Do you wish to perform another conversion? (yes/no)")
+        again = input().lower()
+        if again == "no":
+            print("Bye!")
+            break
+        elif again != "yes":
+            print ("Invalid input. Please enter 'yes' or 'no'.")
+
+main()
