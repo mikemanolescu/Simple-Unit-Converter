@@ -26,16 +26,6 @@ while True:
     else:
         print ("Invalid input. Please enter 'yes' or 'no'.")
 
-
-#Conversion Formulas
-def to_celsius(fahrenheit):
-  celsius = (fahrenheit - 32) * 5/9 
-  return celsius
-  
-def to_fahrenheit(celsius): 
-  fahrenheit = celsius * 9/5 + 32 
-  return fahrenheit
-  
 #Function convert_temperature-
 def convert_temperature():
     print("What would you like to convert? 1 for Celsius to Fahrenheit or 2 for Fahrenheit to Celsius")
@@ -43,31 +33,40 @@ def convert_temperature():
     tempunit = int(input("Enter 1 or 2"))
     #Validate input
     while tempunit not in [1, 2]:
-        print(“This input is not recognized, please enter 1 for Celsius to Fahrenheit or 2 for Fahrenheit to Celsius”)
+        print("This input is not recognized, please enter 1 for Celsius to Fahrenheit or 2 for Fahrenheit to Celsius")
         #Ask user for valid input
         tempunit = int(input("Enter 1 or 2"))
     #Ask for Value to Convert
-    if tempunit == 1:
-        print("Please input degrees Celsius)
-        celsius = int(input("Enter a value"))
 
-    elif tempunit == 2:
-        print("Please input degrees Fahrenheit")
-        fahrenheit = int(input("Enter a value"))
-
-
-
-
-    #If choice is 1:
+     #If choice is 1:
         #Convert using formula: (value x 9/5) + 32
         #Set result as converted value with Fahrenheit unit
-    #Else if choice is 2:
+    if tempunit == 1:
+        value = float(input("Please input degrees Celsius"))
+        fahrenheit = (value * 9/5) + 32 
+        return f"{value}"°C is equal to {fahrenheit}°F" 
+
+    elif tempunit == 2:
+        value = float(input("Please input degrees Fahrenheit"))
+        celsius = (value - 32) * 5/9 
+        return f"{value}°F is equal to {celsius:.2f}°C"    #Print result: original value with unit = converted value with unit
+
+     #Else if choice is 2:
         #Convert using formula: (value - 32) x 9/5
         #Set result as converted value with Celsius unit
 
-    #Print result: original value with unit = converted value with unit
+    
 
 #Function convert_distance-
+def convert_distance():
+    print("What would you like to convert? 1 for Miles to Kilometers or 2 for Kilometers to Miles")
+    distunit = float(input("Enter 1 or 2"))
+
+    while distunit not in [1,2]:
+        print("This input is not recognized, please enter 1 for Miles to Kilometers or 2 for Kilometers to Miles
+        distunit = float(input("Enter 1 or 2"))
+
+
 #Def convert_distance():
     #Print distance conversion choices:
         #1 for Miles to Kilometers
